@@ -2,3 +2,22 @@
     color: #6c757d;
     text-decoration: line-through;
   }
+
+.dark-mode {
+  background-color: rgb(42, 41, 51);
+  color: white;
+}
+
+.dark-mode #ulTasks {
+  color: black;
+}
+
+#dark-button {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  z-index: 20;
+  padding: 5px;
+  background-color: #eee;
+  color: black;
+}
