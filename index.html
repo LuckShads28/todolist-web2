@@ -16,10 +16,16 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
+<body class="dark-mode">
 
   <div class="container">
     <h1 align="center">Todo List</h1>
+
+    
+    <button class="btn btn-info" id="dark-button">
+      <i class="fas fa-moon" id="darkButton-icon"></i>
+    </button>
+
 
     <div class="row">
       <!-- Input box -->
@@ -36,6 +42,7 @@
 
       <!--  Buttons -->
       <div class="col-md-5">
+
         <div class="row">
           <div class="col-6 col-sm-3 col-md-6 p-1">
             <button class="btn btn-success col" disabled id="btnAdd">

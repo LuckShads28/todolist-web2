@@ -4,6 +4,7 @@ let btnReset = $('#btnReset')
 let btnSort = $('#btnSort')
 let btnCleanup = $('#btnCleanup')
 let inpNewTask = $('#inpNewTask')
+let darkmodeButton = $("#dark-button");
 
 function addItem() {
   let listItem = $('<li>', {
@@ -46,3 +47,9 @@ btnReset.click(() => {
 })
 btnCleanup.click(clearDone)
 btnSort.click(sortTasks)
+
+darkmodeButton.click(() => {
+  $("body").toggleClass("dark-mode");
+  $("#darkButton-icon").toggleClass("fa-sun");
+  $("#darkButton-icon").toggleClass("fa-moon");
+});
