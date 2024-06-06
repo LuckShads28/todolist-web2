@@ -1,10 +1,10 @@
-let ulTasks = $("#ulTasks");
-let btnAdd = $("#btnAdd");
-let btnReset = $("#btnReset");
-let btnSort = $("#btnSort");
-let btnCleanup = $("#btnCleanup");
-let inpNewTask = $("#inpNewTask");
-let btnClearAll = $("#btnClearAll");
+let ulTasks = $('#ulTasks')
+let btnAdd = $('#btnAdd')
+let btnReset = $('#btnReset')
+let btnSort = $('#btnSort')
+let btnCleanup = $('#btnCleanup')
+let inpNewTask = $('#inpNewTask')
+let darkmodeButton = $("#dark-button");
 
 function loadTodo() {
   let data = JSON.parse(localStorage.getItem("todolist"));
@@ -97,11 +97,14 @@ inpNewTask.on("input", toggleInputButtons);
 
 btnAdd.click(addItem);
 btnReset.click(() => {
-  inpNewTask.val("");
-  toggleInputButtons();
-});
-btnCleanup.click(clearDone);
-btnSort.click(sortTasks);
-btnClearAll.click(clearAll);
+  inpNewTask.val('')
+  toggleInputButtons()
+})
+btnCleanup.click(clearDone)
+btnSort.click(sortTasks)
 
-loadTodo();
+darkmodeButton.click(() => {
+  $("body").toggleClass("dark-mode");
+  $("#darkButton-icon").toggleClass("fa-sun");
+  $("#darkButton-icon").toggleClass("fa-moon");
+});
